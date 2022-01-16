@@ -1,0 +1,29 @@
+[{
+  "id": "AirCZML",
+  "model": {
+    "gltf": "/3d/Air.glb"
+  },
+  "availability": "2018-07-19T15:18:00Z/2018-07-19T15:18:30Z",
+  "position": {
+    "interpolationAlgorithm": "LINEAR",
+    "forwardExtrapolationType": "HOLD",
+    "cartesian": [
+      "2018-07-19T15:18:00Z",
+      119.91388,
+      28.44592,
+      20,
+      "2018-07-19T15:18:30Z",
+      119.91399,
+      28.44592,
+      20
+    ]
+  },
+  "orientation": {
+    "unitQuaternion": [
+      0.3084011337938999,
+      0.3210181022701266,
+      -0.45850421987074924,
+      0.7686388857813198
+    ]
+  }
+}]

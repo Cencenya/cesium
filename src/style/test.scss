@@ -1,0 +1,249 @@
+@import "../cesium-demo/marker.css";
+html, body, #cesiumContainer {
+  width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+}
+@font-face {
+  font-family: "FZSKJW--GB1-0";
+  src: url("../assets/font/FZShangKJW.TTF");
+}
+
+@font-face {
+  font-family: "TVNordEF-BoldConObl";
+  src: url("../assets/font/TVNordEFCondBoldOblique.woff.ttf");
+}
+
+@font-face {
+  font-family: "TVNordEF-BoldCon";
+  src: url("../assets/font/TVNordEFCondBold.otf");
+}
+
+@font-face {
+  font-family: "TVNordEF-LightCon";
+  src: url("../assets/font/TVNordEFCondLight.otf");
+}
+
+.test-name {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  color: red;
+  z-index: 2;
+}
+
+.set-position {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.container {
+  position: absolute;
+  width: 45px;
+  height: 36px;
+  background: rgba(18, 18, 18, 0.8);
+  z-index: 2;
+}
+
+.navBar {
+  position: relative;
+  // height: 100vh;
+  // width: 100%;
+  // height: calc(100vh - 5px);
+  // border: none;
+
+  .header-box {
+    width: 100%;
+    height: 160px;
+    padding: 33px 39px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(#081a31, rgba($color:#081a31, $alpha:0));
+
+    .header-L {
+      .title {
+        width: 445px;
+        height: 33px;
+        font-family: "FZSKJW--GB1-0";
+        font-size: 34px;
+        font-weight: normal;
+        font-style: italic;
+        font-stretch: normal;
+        letter-spacing: 0px;
+        color: #fff;
+        line-height: 33px;
+        background-image: -webkit-linear-gradient(bottom,
+            #a0d1e8,
+            #e9f4fa,
+            #fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .entitle {
+        height: 9px;
+        font-family: ArialMT;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: italic;
+        font-stretch: normal;
+        letter-spacing: 0.4px;
+        color: #fff;
+        opacity: 0.35;
+        line-height: 33px;
+      }
+    }
+
+    .header-R {
+      display: flex;
+
+      .head-button {
+        width: 108px;
+        height: 32px;
+        border-radius: 16px;
+        text-align: center;
+        line-height: 30px;
+        background: rgba($color: #121212, $alpha: 0.3);
+        border: solid 1px rgba($color: #007dff, $alpha: 0.3);
+        margin: 0 10px;
+        color: rgba($color: #fff, $alpha: 0.8);
+        font-family: MicrosoftYaHei;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
+          border: solid 1px #007dff;
+          background: #007dff;
+        }
+      }
+
+      .selected {
+        color: #fff;
+        border: solid 1px #007dff;
+        background: #007dff;
+        box-shadow: 0 0 5px rgba($color: #fff, $alpha: 0.2);
+      }
+    }
+
+
+  }
+
+  .topbar {
+    position: fixed;
+    display: flex;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+
+    &>div {
+      width: 28px;
+      height: 28px;
+      margin-right: 6px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &:nth-child(2) {
+        
+      }
+    }
+
+    .light {
+      background: #121212;
+      color: #fff;
+      cursor: pointer;
+      transition: all 1s;
+    }
+
+    .moon {
+      background: #007dff;
+      color: #fff;
+      cursor: pointer;
+      transition: all 1s;
+    }
+
+    .iconfont {
+      font-size: 20px;
+    }
+
+
+
+    .search-box {
+      position: relative;
+
+      .button-blue {
+        background: #007dff;
+        color: #fff;
+      }
+
+      .button-gray {
+        background: rgba($color: #646464, $alpha: 0.5);
+        color: rgba($color: #fff, $alpha: 0.6);
+      }
+
+      &>div:nth-child(1) {
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 50%;
+        z-index: 2;
+        cursor: pointer;
+
+        .iconfont {
+          font-size: 14px;
+        }
+
+        &:hover {
+          background: #007dff;
+          color: #fff;
+        }
+      }
+
+      #search {
+        position: absolute;
+        width: 0;
+        height: 28px;
+        background: none;
+        left: 16px;
+        border-radius: 0 28px 28px 0;
+        border: none;
+        border-left: none;
+        box-sizing: border-box;
+        z-index: 1;
+        overflow: hidden;
+        transition-duration: 1s;
+        background: rgba(12, 12, 12, 0.4);
+
+        .ant-input {
+          width: 100px;
+          margin-left: 16px;
+          background: none;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .foot-background {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(rgba($color: #081a31, $alpha: 0),
+        rgba($color: #081a31, $alpha: 0.3));
+  }
+}

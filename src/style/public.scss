@@ -1,0 +1,27 @@
+@import './base.scss';
+* {
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden !important;
+  color: white;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+svg {
+  fill: currentcolor;
+}
