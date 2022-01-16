@@ -1,42 +1,51 @@
-import { Suspense, Component, FC, useState } from 'react';
+import { Suspense, Component, FC, useEffect, useState } from 'react';
 import React from "react";
 import { RouteComponentProps, Switch, Route, withRouter } from "react-router-dom";
-import { Drawer, Button } from 'antd'
+import { Drawer, Button } from 'antd';
+import { vw } from '../../utils/common';
+import CardLayout from '../../components/cardLayout'
 interface HomeProps extends RouteComponentProps {
+  config: any
+}
+interface Props {
+  [k: string]: any;
+}
+interface States {
 
 }
-const Home: FC<HomeProps> = function ({ }) {
-  return (
-    <div>
-      <Drawer
-        placement="left"
-        className={"drawer drawer-left arial"}
-        closable={false}
-        visible={true}
-        maskClosable={false}
-        mask={false}
-        width={450}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Drawer>
-      <Drawer
-        placement="right"
-        className={"drawer drawer-right arial"}
-        closable={false}
-        visible={true}
-        maskClosable={false}
-        mask={false}
-        width={450}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Drawer>
+class Home extends Component<Props, States> {
+  render(): React.ReactNode {
+    return (
+      <div>
+        <Drawer
+          placement="left"
+          className={"drawer drawer-left arial"}
+          closable={false}
+          visible={true}
+          maskClosable={false}
+          mask={false}
+        >
+          <CardLayout config={{}} />
+          <CardLayout config={{}} />
+          <CardLayout config={{}} />
+        </Drawer>
+        <Drawer
+          placement="right"
+          className={"drawer drawer-right arial"}
+          closable={false}
+          visible={true}
+          maskClosable={false}
+          mask={false}
+        >
+          <CardLayout config={{}} />
+          <CardLayout config={{}} />
+          <CardLayout config={{}} />
+        </Drawer>
 
-    </div>
-  )
+      </div>
+    )
+  }
+
 
 }
 export default Home;

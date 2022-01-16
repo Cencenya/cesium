@@ -135,14 +135,18 @@
 }
 .ant-drawer{
   z-index: 3 !important;
+  width: vw(480);
+  overflow: hidden;
   .ant-drawer-content-wrapper {
     box-shadow: none !important;
     height: auto !important;
     .ant-drawer-content {
       background: none;
       .ant-drawer-body {
-        padding: 0 vw(40) 0 vw(40);
+        padding: 0 vw(30) 0 vw(30);
         overflow: hidden;
+        // background-color: red;
+        height: vh(850);
       }
     }
   }
@@ -153,6 +157,7 @@
   font-family: "Microsoft Yahei";
   font-weight: normal;
   padding-top: vh(155);
+  
   h1,
   // h2,
   h3,
@@ -163,6 +168,26 @@
     font-family: "Microsoft Yahei";
     font-weight: normal;
   };
+  .card{
+    width: 100%;
+    height: vh(280);
+    .card-title{
+      position: relative;
+      height: vh(40);
+      h1{
+        font-size: vw(19);
+      }
+      .card-bg{
+      position: absolute;
+      bottom: 0;
+      background-image: url('../assets/image/background/ksh33.png') ;
+      background-size: contain;
+      background-position: center;
+      width: 100%;
+      height: vh(20);
+      }
+    }
+  }
   
 }
 
