@@ -49,7 +49,7 @@ const Header: FC<HeaderProps> = function ({ title, enTitle, bg, style, className
     </li>
   );
   useEffect(() => {
-    console.log(Icon);
+    // console.log(Icon);
 
   }, [])
   return (

@@ -67,6 +67,5 @@ routes.forEach((r, i) => {
     );
   } else r.key = "home";
 });
-console.log(routes);
 
 export default routes;

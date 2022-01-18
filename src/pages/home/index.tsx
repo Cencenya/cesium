@@ -3,18 +3,20 @@ import React from "react";
 import { RouteComponentProps, Switch, Route, withRouter } from "react-router-dom";
 import { Drawer, Button } from 'antd';
 import { vw } from '../../utils/common';
+import LineChart from '../../components/chart/lineChart'
 import CardLayout from '../../components/cardLayout'
 interface HomeProps extends RouteComponentProps {
   config: any
 }
 interface Props {
-  [k: string]: any;
+  [k: string]: any,
 }
 interface States {
 
 }
 class Home extends Component<Props, States> {
-  render(): React.ReactNode {
+  render() {
+    const { config } = this.props
     return (
       <div>
         <Drawer
@@ -25,9 +27,16 @@ class Home extends Component<Props, States> {
           maskClosable={false}
           mask={false}
         >
-          <CardLayout config={{}} />
-          <CardLayout config={{}} />
-          <CardLayout config={{}} />
+          {/*
+           1  传入组件作为参数 qs：cardlayout只负责渲染组件 如何将数据外面传入linechart组件？
+           2  使用高阶组件 ==》 待完成！
+          
+          */}
+          <CardLayout config={config.population} Chart={LineChart} />
+          <CardLayout config={config.population} Chart={LineChart} />
+          <CardLayout config={config.population} Chart={LineChart} />
+          {/* <CardLayout config={config.population} /> */}
+          {/* <CardLayout config={config.population} /> */}
         </Drawer>
         <Drawer
           placement="right"
@@ -37,9 +46,9 @@ class Home extends Component<Props, States> {
           maskClosable={false}
           mask={false}
         >
-          <CardLayout config={{}} />
-          <CardLayout config={{}} />
-          <CardLayout config={{}} />
+          <CardLayout config={config.population} />
+          <CardLayout config={config.population} />
+          <CardLayout config={config.population} />
         </Drawer>
 
       </div>

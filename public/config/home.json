@@ -1,6 +1,11 @@
 {
   "population":{
-"title":"总体情况",
-"backgroundUrl":"../assets/image/background/ksh33.png"
+"title":"交通工具",
+"backgroundUrl":"../assets/image/background/ksh33.png",
+"chart":{
+  "car":["小型车", "中型车", "大型车"],
+  "year":["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+}
+
   }
 }

@@ -135,7 +135,7 @@
 }
 .ant-drawer{
   z-index: 3 !important;
-  width: vw(480);
+  
   overflow: hidden;
   .ant-drawer-content-wrapper {
     box-shadow: none !important;
@@ -157,7 +157,7 @@
   font-family: "Microsoft Yahei";
   font-weight: normal;
   padding-top: vh(155);
-  
+  width: vw(500) !important;
   h1,
   // h2,
   h3,
@@ -174,18 +174,24 @@
     .card-title{
       position: relative;
       height: vh(40);
+      margin-bottom: vh(10);
       h1{
         font-size: vw(19);
       }
       .card-bg{
       position: absolute;
       bottom: 0;
+      left: 0;
       background-image: url('../assets/image/background/ksh33.png') ;
       background-size: contain;
-      background-position: center;
+      // background-position: center;
       width: 100%;
       height: vh(20);
       }
+    }
+    .card-box{
+      height: vh(220);
+      // position: relative;
     }
   }
   
