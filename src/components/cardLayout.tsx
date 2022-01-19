@@ -4,12 +4,12 @@ import LineChart from '../components/chart/lineChart';
 interface CardLayoutProps {
   config: any
   // background: any,
-  Chart?: React.FC
+  Chart?: React.ReactElement
 
 }
 const CardLayout: FC<CardLayoutProps> = function ({ config, Chart }) {
   useEffect(() => {
-    console.log(config);
+    console.log(Chart);
 
   }, [])
   return (
@@ -20,7 +20,7 @@ const CardLayout: FC<CardLayoutProps> = function ({ config, Chart }) {
         <div className="card-bg"></div>
       </div>
       <div className="card-box">
-        {Chart ? <Chart /> : void 0}
+        {Chart ? Chart : void 0}
       </div>
 
     </div>

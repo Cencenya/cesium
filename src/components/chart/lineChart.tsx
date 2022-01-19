@@ -1,11 +1,12 @@
 import react, { FC } from 'react';
 import * as echarts from 'echarts';
 import ReactEcharts from 'echarts-for-react';
-interface chartprops {
+import { fontChart } from '../../utils/common'
+interface props {
   data: any
 }
-const LineChart = (chartprops) => {
-  const { } = chartprops
+const LineChart = (chartprops: props) => {
+  const { year, car, chartdata } = chartprops.data
   const getOption = () => {
     let option = {
       tooltip: {//鼠标指上时的标线
@@ -21,11 +22,11 @@ const LineChart = (chartprops) => {
         itemWidth: 14,
         itemHeight: 5,
         itemGap: 13,
-        data: ['小型车', '中型车', '大型车'],
+        data: car,
         right: '10px',
         top: '0px',
         textStyle: {
-          fontSize: 12,
+          fontSize: fontChart(0.2),
           color: '#fff'
         }
       },
@@ -46,9 +47,10 @@ const LineChart = (chartprops) => {
         axisLabel: {
           textStyle: {
             color: '#fff',
+            fontSize: fontChart(0.2),
           },
         },
-        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        data: year
       }],
       yAxis: [{
         type: 'value',
@@ -63,7 +65,7 @@ const LineChart = (chartprops) => {
         axisLabel: {
           margin: 10,
           textStyle: {
-            fontSize: 14,
+            fontSize: fontChart(0.2),
             color: '#fff'
           },
 
@@ -75,7 +77,7 @@ const LineChart = (chartprops) => {
         }
       }],
       series: [{
-        name: '小型车',
+        name: car[0],
         type: 'line',
         smooth: true,
         lineStyle: {
@@ -101,9 +103,9 @@ const LineChart = (chartprops) => {
             color: 'rgb(137,189,27)'
           }
         },
-        data: [20, 35, 34, 45, 52, 41, 49, 64, 24, 52.4, 24, 33]
+        data: chartdata.s_car
       }, {
-        name: '中型车',
+        name: car[1],
         type: 'line',
         smooth: true,
         lineStyle: {
@@ -129,9 +131,9 @@ const LineChart = (chartprops) => {
             color: 'rgb(0,136,212)'
           }
         },
-        data: [97.3, 99.2, 99.3, 100.0, 99.6, 90.6, 80.0, 91.5, 69.8, 67.5, 90.4, 84.9]
+        data: chartdata.m_car
       }, {
-        name: '大型车',
+        name: car[2],
         type: 'line',
         smooth: true,
         lineStyle: {
@@ -157,7 +159,7 @@ const LineChart = (chartprops) => {
             color: 'rgb(219,50,51)'
           }
         },
-        data: [84.2, 81.0, 67.5, 62.1, 43.7, 68.5, 51.9, 71.8, 76.7, 67.6, 62.9, 0]
+        data: chartdata.x_car
       },]
     };
     return option
