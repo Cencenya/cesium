@@ -157,7 +157,7 @@
   font-family: "Microsoft Yahei";
   font-weight: normal;
   padding-top: vh(155);
-  width: vw(500) !important;
+  width: vw(480) !important;
   h1,
   // h2,
   h3,
@@ -192,6 +192,37 @@
     .card-box{
       height: vh(220);
       // position: relative;
+      .text_title{
+        display: flex;
+        justify-content: space-around;
+        a{
+          color: #fff;
+          font-size: vw(14);
+        }
+      }
+      .text_box{
+        width: 100%;
+        height: calc(36% - 15px);
+        border: 1px solid #1380bd;
+        position: relative;
+        img{
+          background-image: url('../assets/image/background/ksh34.png');
+          background-size: contain;
+          height: 4px;
+          width: 4px;
+          position: absolute;
+          top: -2px;
+          left: -2px;
+        }
+        ::after{
+          background-image: url('../assets/image/background/ksh34.png');
+          background-size: contain;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+        }
+      }
     }
   }
   

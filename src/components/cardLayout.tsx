@@ -9,13 +9,13 @@ interface CardLayoutProps {
 }
 const CardLayout: FC<CardLayoutProps> = function ({ config, Chart }) {
   useEffect(() => {
-    console.log(Chart);
+    console.log(config);
 
   }, [])
   return (
     <div className="card">
       <div className="card-title">
-        <h1>{config.title}</h1>
+        <h1>{config ? config.title : void 0}</h1>
         {/* <img src={background} alt="" /> */}
         <div className="card-bg"></div>
       </div>

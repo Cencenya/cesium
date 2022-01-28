@@ -162,48 +162,6 @@ const LineChart = (chartprops: props) => {
         data: chartdata.x_car
       },]
     };
-    let option3 = {
-      tooltip: {
-        show: true,
-        trigger: "item"
-      },
-      radar: {
-        center: ["50%", "50%"],//偏移位置
-        radius: "80%",
-        startAngle: 40, // 起始角度
-        splitNumber: 4,
-        shape: "circle",
-        splitArea: {
-          areaStyle: {
-            color: 'transparent'
-          }
-        },
-        axisLabel: {
-          show: false,
-          fontSize: 20,
-          color: "#000",
-          fontStyle: "normal",
-          fontWeight: "normal"
-        },
-        axisLine: {
-          show: true,
-          lineStyle: {
-            color: "rgba(255, 255, 255, 0.5)"
-          }
-        },
-        splitLine: {
-          show: true,
-          lineStyle: {
-            color: "rgba(255, 255, 255, 0.5)"
-          }
-        },
-        // indicator: indicator
-      },
-      series: [{
-        type: "radar",
-        // data: renderData
-      }]
-    }
     return option
   }
   return (

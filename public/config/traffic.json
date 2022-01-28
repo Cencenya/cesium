@@ -11,5 +11,26 @@
     "x_car":[84.2, 81.0, 67.5, 62.1, 43.7, 68.5, 51.9, 71.8, 76.7, 67.6, 62.9, 0]
   }
 }
+  },
+  "population2":{
+    "title":"交通工具",
+    "chart":{}
+  },
+  "population3":{
+    "title":"收费站车流量",
+    "chart":{}
+  },
+  "population4":{
+    "title":"本月发生事件",
+    "chart":{}
+  },
+  "population5":{
+    "title":"收费站收费量",
+    "chart":{}
+  },
+  "population6":{
+    "title":"收费站收费排行",
+    "chart":{}
   }
+  
 }

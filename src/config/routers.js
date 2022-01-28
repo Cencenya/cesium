@@ -42,7 +42,7 @@ const routes = [
     title: "交通情况",
     component: Traffic,
     icon: require("../assets/icon/交通信息.svg").default,
-    configPath: "./config/acceptance.json",
+    configPath: "./config/traffic.json",
   },
   {
     path: "/travel",
