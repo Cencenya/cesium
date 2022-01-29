@@ -38,11 +38,6 @@ const Header: FC<HeaderProps> = function ({ title, enTitle, bg, style, className
       key={i}
       className={"pointer"}
       style={{ margin: `0 ${vw(marginX)}`, paddingBottom: 4 }}
-    // onClick={() => {
-    //   if (item.title == '打孔注药') {
-    //     message.warning('功能开发中...')
-    //   }
-    // }}
     >
       {item.icon ? <Icon src={item.icon} /> : <UnorderedListOutlined />}
       <div>{item.title}</div>

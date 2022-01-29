@@ -1,0 +1,77 @@
+@import "./base.scss";
+@import "./public.scss";
+
+
+.piechart-3d-legend{
+  &-item{
+    color:#fff;
+    display:flex;
+    align-items: center;
+  }
+  &-icon{
+    display:inline-block;
+    width:vw(6);
+    height:vh(6);
+    background-color: #11BC8E;
+  }
+  &-name{
+    margin:0 vw(8) 0 vw(10);
+    font-size:vw(10);
+  }
+  &-data{
+    font-size:vw(10);
+  }
+  &-unit{
+    font-size:vw(10);
+  }
+}
+.piechart-3d-w{
+  width:100%;
+  height:vh(200) !important;
+  display:flex;
+  // padding: 0 vw(30);
+  align-items: center;
+  .piechart-3d-legend-w{
+    flex-grow: 0;
+    flex-shrink: 0;
+    // padding-left:vw(14);
+    box-sizing: border-box;
+    padding-right: vw(14);
+  }
+  .piechart-3d-chart-w{
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .highcharts-container,.highcharts-root {
+    width:100%!important;
+    height:vh(200) !important;
+    font-size: vw(10) !important;;
+  }
+}
+
+.piechart-3d-w2{
+  .piechart-3d-legend-w{
+    padding-left:0;
+  }
+  .contradiction-text{
+    font-size: vw(10);
+    color:#fff;
+  }
+  .contradiction-div{
+    color:#F3FCFF;
+    text-shadow: 0px 0px 7px #31B0F7;
+    display:flex;
+    align-items: flex-end;
+    padding:vh(8) 0 vh(8);
+  }
+  .contradiction-data{
+    font-size: vw(40);
+    margin-right: vw(6);
+    line-height: 1;
+    font-weight: bold;
+  }
+  .contradiction-unit{
+    font-size: vw(12);
+    line-height: 1;
+  }
+}

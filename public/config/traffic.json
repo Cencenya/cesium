@@ -22,15 +22,34 @@
   },
   "population4":{
     "title":"本月发生事件",
-    "chart":{}
+    "chart":{
+      "data": [
+        { "name": "已解决", "y": 147, "unit": "件" },
+        { "name": "未解决", "y": 117, "unit": "件" }
+      ],
+      "problem": 264
+    }
   },
   "population5":{
     "title":"收费站收费量",
-    "chart":{}
+    "chart":{
+      "data": [
+        { "value": 335, "name": "小型车", "unit": "" },
+        { "value": 310, "name": "中型车", "unit": "" },
+        { "value": 234, "name": "大型车", "unit": "" }
+      ]
+    }
   },
   "population6":{
     "title":"收费站收费排行",
-    "chart":{}
-  }
-  
+    "chart":[
+      { "value": 98, "name": "莲都区", "unit": "" },
+    { "value": 80, "name": "青田", "unit": "" },
+    { "value": 90, "name": "庆元", "unit": "" },
+    { "value": 92, "name": "缙云", "unit": "" },
+    { "value": 98, "name": "松阳", "unit": "" },
+    { "value": 78, "name": "云和", "unit": "" },
+    { "value": 45, "name": "龙泉", "unit": "" }
+]
+}
 }

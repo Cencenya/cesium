@@ -15,7 +15,24 @@ export const Text: FC<TextProps> = (textprops: TextProps) => {
         <a >货运量</a>
       </div>
       <div className='text_box'>
-        <img className='' />
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
+        {/* <div>小羊是个小笨蛋</div> */}
+      </div>
+      <div className='text_box'>
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
+        {/* <div>小羊是个小笨蛋</div> */}
+      </div>
+      <div className='text_box'>
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
+        <img className='text_bkjk' />
         {/* <div>小羊是个小笨蛋</div> */}
       </div>
     </>

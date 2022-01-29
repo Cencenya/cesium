@@ -18,6 +18,8 @@
     "craco-less": "^1.17.1",
     "echarts": "^5.2.2",
     "echarts-for-react": "^3.0.2",
+    "highcharts": "^9.3.2",
+    "highcharts-react-official": "^3.1.0",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

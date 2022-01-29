@@ -5,6 +5,9 @@ import { Drawer, Button } from 'antd';
 import LineChart from '../../components/chart/lineChart';
 import BarChart from '../../components/chart/barChart';
 import CardLayout from '../../components/cardLayout';
+import PieChart3D from '../../components/chart/PieChart3D';
+import PieChart from '../../components/chart/PieChart';
+import HorizontalBar from '../../components/chart/HorizontalBar'
 import { Text } from '../../components/common';
 interface HomeProps extends RouteComponentProps {
   config: any
@@ -44,9 +47,9 @@ class Traffic extends Component<Props, States> {
           maskClosable={false}
           mask={false}
         >
-          <CardLayout config={config.population4} />
-          <CardLayout config={config.population5} />
-          <CardLayout config={config.population6} />
+          <CardLayout config={config.population4} Chart={<PieChart3D data={config.population4.chart} />} />
+          <CardLayout config={config.population5} Chart={<PieChart datas={config.population5.chart.data} />} />
+          <CardLayout config={config.population6} Chart={<HorizontalBar datas={config.population6.chart} />} />
         </Drawer>
 
       </div>

@@ -191,7 +191,13 @@
     }
     .card-box{
       height: vh(220);
-      // position: relative;
+     //3dchart
+    //  .highcharts-container,.highcharts-root {
+    //   width:100%!important;
+    //   height:vh(200) !important;
+    //   font-size: 60px !important;;
+    // }
+      
       .text_title{
         display: flex;
         justify-content: space-around;
@@ -205,15 +211,43 @@
         height: calc(36% - 15px);
         border: 1px solid #1380bd;
         position: relative;
-        img{
+        margin-bottom: vh(10);
+        // img{
+        //   background-image: url('../assets/image/background/ksh34.png');
+        //   background-size: contain;
+        //   height: 4px;
+        //   width: 4px;
+        //   position: absolute;
+        //   top: -2px;
+        //   left: -2px;
+          
+        // }
+        .text_bkjk{
           background-image: url('../assets/image/background/ksh34.png');
           background-size: contain;
           height: 4px;
           width: 4px;
           position: absolute;
+        }
+        .text_bkjk:first-child{
           top: -2px;
           left: -2px;
         }
+        .text_bkjk:nth-child(2){
+          top: -2px;
+          right: -2px;
+        }
+        .text_bkjk:nth-child(3){
+          bottom: -2px;
+          left: -2px;
+        }
+        .text_bkjk:nth-child(4){
+          bottom: -2px;
+          right: -2px;
+        }
+
+        
+        
         ::after{
           background-image: url('../assets/image/background/ksh34.png');
           background-size: contain;
