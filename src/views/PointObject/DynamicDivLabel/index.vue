@@ -1,0 +1,43 @@
+<template>
+  <div class="app-wrapp">
+    <div class="cesium-container" id="cesium-container"></div>
+    <!-- <div class="panel">
+      <div class="panel-header">DivPoint</div>
+      <div class="panel-body">
+        <button @click="pickCamera">视角</button> 
+      </div>
+    </div>  -->
+  </div>
+</template>
+
+
+
+<script>
+import DivPoint from "@/components/PopupWindow/DivPoint/window.vue";
+import CesiumInit from "@/js/SampleItems/PointObject/DynamicDivLabel";
+ 
+import { pickCamera } from "@/utils/scene";
+import "@/assets/css/animatepoint.css";
+export default {
+  name: "CesiumDynamicDivLabel",
+  data() {
+    return {};
+  }, 
+
+  mounted() {
+    CesiumInit.init("cesium-container");
+  },
+
+  beforeDestroy() {
+    CesiumInit.destroy();
+  },
+
+  methods: {
+    pickCamera() {
+      console.log(pickCamera(CesiumInit.viewer.scene));
+    }
+  }
+};
+</script>
+
+ 

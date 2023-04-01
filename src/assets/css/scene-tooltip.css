@@ -1,0 +1,26 @@
+.tooltip-container {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    min-width: 50px;
+    min-height: 20px;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(63, 72, 84, .9);
+}
+
+.tooltip-container::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: calc(50% - 5px);
+    border: 6px solid transparent;
+    border-top: 10px solid rgba(63, 72, 84, .9);
+}
+
+
+/* 
+.tooltip-header {
+    text-align: center;
+} */

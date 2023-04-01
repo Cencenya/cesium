@@ -1,0 +1,21 @@
+.label3d-container {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    min-width: 100;
+    padding: 3px 5px;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    background-color: blue;
+    pointer-events: none;
+}
+
+.label3d-container::before {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: calc(50% - 10px);
+    border: 12px solid transparent;
+    border-top: 20px solid blue;
+}
